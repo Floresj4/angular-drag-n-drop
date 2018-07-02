@@ -17,6 +17,10 @@ export class AppComponent implements OnInit {
     ];
   }
 
+  onAddNewItem() {
+
+  }
+
   onDragStart($event, listItem: any) {
     console.log('onDragStart: ' + $event + ' ' + listItem);
     $event.dataTransfer.setData("ListItem", listItem);
