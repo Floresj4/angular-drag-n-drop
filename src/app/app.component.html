@@ -10,7 +10,9 @@
     <ul class="list-group">
       <li *ngFor="let item of listData"
           draggable="true"
-          (dragstart)="onDragStart($event)"
+          (dragstart)="onDragStart($event, item)"
+          (dragover)="onDragOver($event)"
+          (drop)="onDrop($event)"
           class="list-group-item">
         {{ item }}
       </li>
