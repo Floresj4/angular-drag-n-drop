@@ -17,20 +17,20 @@ export class AppComponent implements OnInit {
     ];
   }
 
-  onAddNewItem() {
-
-  }
-
-  onDragStart($event, listItem: any) {
-    console.log('onDragStart: ' + $event + ' ' + listItem);
-    $event.dataTransfer.setData("ListItem", listItem);
+  onDragStart($event, startIndex: number) {
+    console.log('onDragStart: ' + $event + ' ' + this.listData[startIndex]);
+    $event.dataTransfer.setData("StartIndex", startIndex);
   }
 
   onDragOver($event) {
     $event.preventDefault();
   }
 
-  onDrop($event) {
-    console.log('onDrop: ' + $event.dataTransfer.getData("ListItem"));
+  onDrop($event, dropIndex: number) {
+    const startIndex: number = +$event.dataTransfer.getData("StartIndex");
+    console.log('onDrop: ' + startIndex + ', ' + dropIndex);
+
+    const removed = this.listData.splice(startIndex, 1)[0];
+    this.listData.splice(dropIndex, 0, removed);
   }
 }
