@@ -11,9 +11,11 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.listData = [
-      'Hot water heater',
-      'Digital locks',
-      'Curtain hooks'
+      'Hammer',
+      'Screwdriver',
+      'Ratching Wrench',
+      'Saw',
+      'Propane Torch'
     ];
   }
 
