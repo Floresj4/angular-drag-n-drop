@@ -25,7 +25,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".plus-sign::after {\r\n  content: '+';\r\n  font-weight: bolder;\r\n}\r\n\r\n.btn-add {\r\n  padding: 2px 6px !important;\r\n  margin-top: 2px;\r\n  float:right;\r\n}\r\n\r\n.input-add {\r\n  width: 90%;\r\n  display: inline-block;\r\n}\r\n", ""]);
+exports.push([module.i, ".plus-sign::after {\r\n  content: '+';\r\n  font-weight: bolder;\r\n}\r\n\r\n.btn-add {\r\n  padding: 2px 6px !important;\r\n  margin-top: 2px;\r\n  float:right;\r\n}\r\n\r\n.input-add {\r\n  width: 90%;\r\n  display: inline-block;\r\n}\r\n\r\n.drag-n-drop-example {\r\n  margin-top:20px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <div class=\"col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4\">\r\n\r\n    <h3>List</h3>\r\n\r\n    <form>\r\n\r\n      <ul class=\"list-group\">\r\n        <li *ngFor=\"let item of listData; let i = index\"\r\n            draggable=\"true\"\r\n            (dragstart)=\"onDragStart($event, i)\"\r\n            (dragover)=\"onDragOver($event)\"\r\n            (drop)=\"onDrop($event, i)\"\r\n            class=\"list-group-item\">\r\n          {{ item }}\r\n        </li>\r\n      </ul>\r\n\r\n    </form>\r\n\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\r\n\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xs-12 col-sm-4 col-sm-offset-2\">\r\n      <h3>Drag and drop list</h3>\r\n      <p>An implementation of Drag-n-drop using Angular components.</p>\r\n    </div>\r\n\r\n    <div class=\"col-xs-12 col-sm-4\">\r\n\r\n      <ul class=\"list-group drag-n-drop-example\">\r\n        <li *ngFor=\"let item of listData; let i = index\"\r\n            draggable=\"true\"\r\n            (dragstart)=\"onDragStart($event, i)\"\r\n            (dragover)=\"onDragOver($event)\"\r\n            (drop)=\"onDrop($event, i)\"\r\n            class=\"list-group-item\">\r\n          {{ item }}\r\n        </li>\r\n      </ul>\r\n\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
